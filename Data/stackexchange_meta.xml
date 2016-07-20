@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <identifier>stackexchange</identifier>
+  <publicdate>2014-01-21 18:54:32</publicdate>
+  <title>Stack Exchange Data Dump</title>
+  <mediatype>data</mediatype>
+  <collection>opensource</collection>
+  <uploader>team+datadump@stackexchange.com</uploader>
+  <addeddate>2014-01-21 18:54:32</addeddate>
+  <creator>Stack Exchange, Inc.</creator>
+  <date>2016-03-01</date>
+  <year>2016</year>
+  <subject>Stack Exchange Data Dump</subject>
+  <contributor>Stack Exchange Community</contributor>
+  <description>This is an anonymized dump of all user-contributed content on the &lt;a href="http://stackexchange.com" rel="nofollow"&gt;Stack Exchange network&lt;/a&gt;. Each site is formatted as a separate archive consisting of XML files zipped via 7-zip using bzip2 compression.  Each site archive includes Posts, Users, Votes, Comments, PostHistory and PostLinks. For complete schema information, see the included readme.txt.
+
+&lt;b&gt;We recommend downloading these files directly as it turns out that archive.org does not update or create .torrents for archives larger than &gt;25gb.  
+
+
+All user content contributed to the Stack Exchange network is cc-by-sa 3.0 licensed, intended to be shared and remixed. We even provide all our data as a convenient data dump.
+&lt;/b&gt;&lt;blockquote&gt;License: &lt;a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="nofollow"&gt;http://creativecommons.org/licenses/by-sa/3.0/&lt;/a&gt;&lt;/blockquote&gt;But our cc-by-sa 3.0 licensing, while intentionally permissive, does &lt;b&gt;require attribution&lt;/b&gt;:
+&lt;blockquote&gt;Attribution — You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).&lt;/blockquote&gt;Specifically the attribution requirements are as follows:
+&lt;ol&gt;&lt;li&gt;Visually display or otherwise indicate the source of the content as coming from the Stack Exchange Network. This requirement is satisfied with a discreet text blurb, or some other unobtrusive but clear visual indication.&lt;/li&gt;
+&lt;li&gt;Ensure that any Internet use of the content includes a hyperlink directly to the original question on the source site on the Network (e.g., http://stackoverflow.com/questions/12345)&lt;/li&gt;
+&lt;li&gt;Visually display or otherwise clearly indicate the author names for every question and answer used&lt;/li&gt;
+&lt;li&gt;Ensure that any Internet use of the content includes a hyperlink for each author name directly back to his or her user profile page on the source site on the Network (e.g., http://stackoverflow.com/users/12345/username), directly to the Stack Exchange domain, in standard HTML (i.e. not through a Tinyurl or other such indirect hyperlink, form of obfuscation or redirection), without any “nofollow” command or any other such means of avoiding detection by search engines, and visible even with JavaScript disabled.&lt;/li&gt;&lt;/ol&gt;
+For more information, see the &lt;a href="http://stackexchange.com/legal/terms-of-service" rel="nofollow"&gt;Stack Exchange Terms of Service&lt;/a&gt;.</description>
+  <licenseurl>http://creativecommons.org/licenses/by-sa/3.0/</licenseurl>
+  <curation>[curator]malware@archive.org[/curator][date]20140312004239[/date][comment]checked for malware[/comment]</curation>
+  <year>2015</year>
+  <year>2014</year>
+</metadata>

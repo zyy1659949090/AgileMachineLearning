@@ -1,0 +1,5 @@
+*.dump
+settings.py
+.idea
+*.pyc
+
