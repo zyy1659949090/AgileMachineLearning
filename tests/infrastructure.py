@@ -1,7 +1,7 @@
 import unittest
 
 from database import run_query
-from settings import DATABASE_NAME, DATABASE_USER
+from settings import DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD
 
 
 class TestDatabaseExists(unittest.TestCase):
@@ -16,9 +16,11 @@ class TestDatabaseExists(unittest.TestCase):
         import psycopg2
         dbname = DATABASE_NAME
         dbuser = DATABASE_USER
+        dbpass = DATABASE_PASSWORD
 
         try:
-            conn = psycopg2.connect("dbname={} user={}".format(dbname, dbuser))
+            conn = psycopg2.connect("dbname={} user={} password={}".format(
+                dbname, dbuser, dbpass))
         except Exception as e:
             self.fail(e)
 
