@@ -20,7 +20,7 @@ PARTY_DATA =       [["Urgent", "Yes", "Yes", "Party"],
 
 class TestNaiveBayes(unittest.TestCase):
     def test_party_solutions_with_pre_built_model(self):
-        X = ["Near", "No", "Yes"]
+        
         predicted_class = wrapper_for_nb_in_sklearn(PARTY_DATA, X)
         self.assertEqual(predicted_class, "TV")
 
