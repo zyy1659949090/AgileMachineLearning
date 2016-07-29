@@ -14,3 +14,7 @@ PARTY_DATA =       [["Urgent", "Yes", "Yes", "Party"],
                     ["Near", "No", "Yes", "TV"],
                     ["Near", "Yes", "Yes", "Party"],
                     ["Urgent", "No", "No", "Study"]]
+
+from sklearn.datasets import load_digits
+
+DIGITS_DATASET = load_digits()
