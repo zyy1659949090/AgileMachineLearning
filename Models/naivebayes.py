@@ -15,9 +15,8 @@ def wrapper_for_nb_in_sklearn(data, current_state_to_predict):
     training = np.array([x[:-1] for x in clean])
     clf = MultinomialNB()
     clf.fit(training, labels)
-
-
-
+    current_state_to_predict = np.array(current_state_to_predict)
+    current_state_to_predict = current_state_to_predict.reshape(1,-1)
     thing = le.transform(np.array(current_state_to_predict))
 
     final =  clf.predict(thing)
@@ -25,24 +24,23 @@ def wrapper_for_nb_in_sklearn(data, current_state_to_predict):
     return le.inverse_transform(final)
     # return None
 if __name__ == '__main__':
-	PARTY_DATA_HEADER = ["Deadline", "Party", "Lazy", "Activity"]
-	PARTY_DATA = [["Urgent", "Yes", "Yes", "Party"],
-		["Urgent", "No", "Yes", "Study"],
-		["Near", "Yes", "Yes", "Party"],
-		["None", "Yes", "No", "Party"],
-		["None", "No", "Yes", "Pub"],
-		["None", "Yes", "No", "Party"],
-		["Near", "No", "No", "Study"],
-		["Near", "No", "Yes", "TV"],
-		["Near", "Yes", "Yes", "Party"],
-		["Urgent", "No", "No", "Study"]]
-	
+    PARTY_DATA_HEADER = ["Deadline", "Party", "Lazy", "Activity"]
+    PARTY_DATA = [["Urgent", "Yes", "Yes", "Party"],
+    	["Urgent", "No", "Yes", "Study"],
+    	["Near", "Yes", "Yes", "Party"],
+    	["None", "Yes", "No", "Party"],
+    	["None", "No", "Yes", "Pub"],
+    	["None", "Yes", "No", "Party"],
+    	["Near", "No", "No", "Study"],
+    	["Near", "No", "Yes", "TV"],
+    	["Near", "Yes", "Yes", "Party"],
+    	["Urgent", "No", "No", "Study"]]
 
-	X = ["Near", "No", "Yes"]
-	
+    X = ["Near", "No", "Yes"]
+
     # Convert inputs to arrays to leverage numpy's reshaping and indexing
-    data = np.array(data)
-    state_to_predict = np.array(current_state_to_predict).reshape((1, -1))
+    data = np.array(PARTY_DATA)
+    state_to_predict = np.array(X).reshape((1, -1))
 
     # Convert strs to ints for all Inputs:
     le = LabelEncoder()
@@ -62,6 +60,4 @@ if __name__ == '__main__':
 
     # Predict for sample, and convert back to string:
     predicted_state_as_str = clf.predict(intified_state_to_predict)[0]
-
-    return predicted_state_as_str
 
