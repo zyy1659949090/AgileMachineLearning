@@ -11,6 +11,8 @@ class TestNeuralNetworks(TestCase):
         # 20ish % is 'working'
         # 50ish % was where I thought I was stuck for a while
         # 95ish % is the highest I was getting
+        #   Note that you want the test to pass consistently.  So whatever this
+        # threshold is should be the worst-case-scenario training minimum
         accuracy_target = 0.5  # percent
 
 
