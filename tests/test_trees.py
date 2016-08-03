@@ -1,7 +1,6 @@
 from unittest import TestCase
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
-
 from Models.trees import wrapper_for_decision_tree_in_sklearn
 from Models.trees import wrapper_for_decision_tree_accuracy
 from tests.data import DIGITS_DATASET
