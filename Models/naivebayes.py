@@ -28,7 +28,7 @@ def wrapper_for_nb_in_sklearn_by_riley(data, current_state_to_predict):
 def wrapper_for_nb_in_sklearn(data, current_state_to_predict):
     # Convert inputs to arrays to leverage numpy's reshaping and indexing
     data = np.array(data)
-    state_to_predict = np.array(X).reshape((1, -1))
+    state_to_predict = np.array(current_state_to_predict).reshape((1, -1))
 
     # Convert strs to ints for all Inputs:
     le = LabelEncoder()
