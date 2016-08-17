@@ -23,3 +23,39 @@ def wrapper_for_decision_tree_accuracy(X, y, relative_test_size):
 	score = accuracy_score(pred,y_test)
 
 	return score
+
+
+class RileyRandomForest(object):
+    def __init__(self, n_estimators = 3):
+        self.n_estimators = n_estimators
+        self.trees = {}
+        self.predictions = []
+        self.prediction = []
+
+    def forest_fit(self,X,y):
+        for i in range(self.n_estimators):
+            self.trees['tree{}'.format(i)] = {'tree':DecisionTreeClassifier()}
+            self.trees['tree{}'.format(i)]['tree'].fit(X,y)
+
+    def forest_predict(self,X):
+        lst = []
+        for tree in self.trees:
+            self.predictions.append(self.trees[tree]['tree'].predict(X))
+        print self.predictions
+        for i,_ in enumerate(self.predictions[0]):
+            for pred in self.predictions:
+                lst.append(pred[i])
+            final = max(set(lst), key=lst.count)
+            self.prediction.append(final)
+        return self.prediction
+
+
+
+
+
+
+
+
+
+
+
