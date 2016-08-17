@@ -37,3 +37,28 @@ BERNOULLI_PARTY_DATA = [
 from sklearn.datasets import load_digits
 
 DIGITS_DATASET = load_digits()
+data = DIGITS_DATASET['data']
+targets = DIGITS_DATASET['target']
+
+#print (targets)
+#print (data)
+
+# https://www.kaggle.com/kobakhit/digit-recognizer/digit-recognizer-in-python-using-cnn/notebook
+# https://www.kaggle.com/c/digit-recognizer/forums/t/2299/getting-started-python-sample-code-random-forest
+
+import numpy as np
+import pandas as pd
+# create the training & test sets, skipping the header row with [1:]
+dataset = pd.read_csv("Data/train.csv")
+target = dataset[[0]].values.ravel()
+
+train = dataset.iloc[:,1:].values
+
+
+#test = dataset.iloc[]
+
+# convert to array, specify data type, and reshape
+target = target.astype(np.uint8)
+#print target
+train = np.array(train).reshape((-1, 28, 28)).astype(np.uint8)
+#print train
