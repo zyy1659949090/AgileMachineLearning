@@ -83,7 +83,7 @@ class RileySVMForest(object):
 
 def wrapper_for_riley_random_forest(X, y):
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=relative_test_size, random_state=42)
+        X, y, random_state=42)
     clf = RileyRandomForest()
     clf.forest_fit(X_train, y_train)
     pred = clf.forest_predict(X_test)
